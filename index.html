@@ -170,7 +170,7 @@
 						</div>
 					</div><!-- Cierra conversaciones -->
 				</div><!-- Cierra col -->
-				<!-- Sección de Chat -->
+				<!-- Sección de diálogos de Chat -->
 				<div class="col-md-8">
 					<!-- Encabezado de conversacion -->
 					<div class="chat bg-gray border">
@@ -179,10 +179,16 @@
 						<i class="icon-message icono"></i>
 					</div>
 					<!--Chat-->
-					<div class="border bg-whats" id="chat"></div>
+					<div class="border bg-whats" id="chat">
+						<div id="burbujaChat" class="text-box">
+							
+						</div>
+					</div>
 					<!-- Escribir mensaje-->
 					<div class="bg-gray border">
-						<i class="icon-insert_emoticon emoticon"></i><input class="mensaje" type="text" placeholder="Escribe tu mensaje aqui" required><i class="icon-mic mic"></i>
+						<i class="icon-insert_emoticon emoticon"></i>
+						<input id="nuevoMensaje" class="mensaje" type="text" placeholder="Escribe tu mensaje aqui" required>
+						<i class="icon-mic mic"></i>
 					</div>
 				</div><!-- Cierra col -->
 			</div><!-- Cierra row -->
