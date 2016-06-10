@@ -1,0 +1,156 @@
+/* Margin y Padding */
+.mt-2{
+	margin-top: 2%;
+}
+.mb-2{
+	margin-bottom: 2%;
+}
+.pd-2{
+	padding: 2%;
+}
+.ml-2{
+	margin-left: 2%;
+}
+.padding-col{
+	padding:0;
+}
+/* Imagen */
+.perfil{
+	width:  50px;
+	height: 50px;
+	border-radius: 100px;
+}
+/* Backgrounds */
+/*#header{
+	background-color: #177569;
+	height: 100px;
+}*/
+body{
+	background: linear-gradient(to bottom,  #177569 0%,#177569 15%,#f6f6f6 15%,#f6f6f6 100%)
+}
+.bg-gray{
+	background-color: #E3E3E3;
+}
+.bg-white{
+	background-color: #ffffff;
+}
+.bg-whats{
+	background-image: url("../image/chat-panel-bg.png");
+	height:450px;
+}
+#ventana{
+	margin-top: 4%;
+}
+
+.conversacion{
+	background-color: #fff;
+	border: 1px solid #BABABA;
+}
+/* Icono */
+.icono{
+	font-size: 1.5em;
+	color: #292929;
+	float: right;
+	padding: 2%;
+}
+/* Bordes */
+/*.border{
+	border: 1px solid #BABABA;
+}*/
+/* Input */
+.buscar{
+	padding: 2%;
+	display: block;
+	margin: 4% auto;
+	width: 90%;
+}
+.mensaje{
+	padding:1%;
+	margin: 2% auto;
+	width: 90%;
+}
+.emoticon{
+	font-size: 1.5em;
+	color: #292929;
+	float: left;
+	padding: 3% 1%;
+}
+.mic{
+	font-size: 1.5em;
+	color: #292929;
+	float: right;
+	padding: 3% 1%;
+}
+/* Conversaciones */
+.chats-header{
+	padding: 2%;
+	height: 70px;
+	border: 1px solid #BABABA;
+}
+.chat{
+	padding: 1%;
+	height: 70px;
+}
+#conversaciones{
+	height: 450px;
+	overflow-y: scroll;  
+	overflow-x:hidden;
+}
+#conversaciones div{
+	padding: 1% 2%;
+}
+.inline{
+	display: inline-block;
+}
+.usuario{
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-left: 2%;
+}
+/* Chat */
+#chat{
+	position: relative;
+	overflow-y:scroll;
+	overflow-x:hidden;  
+}
+#chat p{
+	margin-bottom: 0;
+}
+.text-box{
+	background-color: #fff;
+	padding: 1%;
+	border-radius: 5%;
+	position: relative;
+	width: 40%;
+	margin-top: 2%;
+	display: block
+}
+.left{
+	position: relative;
+	left: 5%;
+}
+.right{
+	position:relative;
+	right: -55%;
+	background-color: #8DDB76;
+	width: 40%;
+	margin-top: 2%;
+	padding: 1%;
+	border-radius: 5%;
+}
+.hora{
+	text-align: right;
+}
+/* Text colors */
+.text-azul{
+	color: #43D0DE;
+}
+.text-rojo{
+	color: #DE245B;
+}
+.text-verde{
+	color: #49B85C;
+}
+.text-am{
+	color: #DEAA24;
+}
