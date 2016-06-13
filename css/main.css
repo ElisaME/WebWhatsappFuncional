@@ -39,7 +39,7 @@ body{
 	height:450px;
 }
 #ventana{
-	margin-top: 4%;
+	margin-top: 2%;
 }
 
 .conversacion{
@@ -67,7 +67,7 @@ body{
 .mensaje{
 	padding:1%;
 	margin: 2% auto;
-	width: 90%;
+	width: 80%;
 }
 .emoticon{
 	font-size: 1.5em;
@@ -117,13 +117,13 @@ body{
 	margin-bottom: 0;
 }
 .text-box{
-	background-color: #fff;
+	background-color:#83E881;
 	padding: 1%;
 	border-radius: 5%;
 	position: relative;
 	width: 40%;
 	margin-top: 2%;
-	display: block
+	display: block;
 }
 .left{
 	position: relative;
