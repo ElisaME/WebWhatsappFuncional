@@ -1,8 +1,6 @@
-
 //FUNCIONA
 var cajaChat = document.getElementById("burbujaChat"),
-	mensajeInput = document.getElementById("mensajeInput"),
-	btnNuevaTarea = document.getElementById("btn-agregar");
+	mensajeInput = document.getElementById("mensajeInput");
 
 // Funciones
 var agregarTarea = function(){
@@ -19,20 +17,15 @@ var agregarTarea = function(){
 };
 
 $(document).ready(function(){
-	// Agregar Mensaje con boton
-	btnNuevaTarea.addEventListener("click", agregarTarea);
+	// Agregar Mensaje con enter
+	$('#mensajeInput').keypress(function(e){
+		var mensaje=mensajeInput.value
+		if (e.which == 13){
+			//Para no enviar mensajes en blanco
+			if (mensaje==''){
+				return false
+			}
+			agregarTarea();
+		}
+	});
 });
-
-
-mensajeInput.onkeyup = function(e){
-	if (e.which == 13){
-		agregarTarea;
-	}
-}
-//Imprime en consola el valor del input al hacer enter
-// $('#nuevoMensaje').keydown(function(e){
-// 	var key = e.which;
-// 	if(key == 13) {
-// 		addEventListener(agregarTarea);
-// 	}
-// });
