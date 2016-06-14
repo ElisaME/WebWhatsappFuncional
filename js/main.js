@@ -21,12 +21,13 @@ var agregarTarea = function(){
 		nuevoMensaje = document.createElement("div"),
 		contenido = document.createTextNode(mensaje);
 
-	nuevoMensaje.setAttribute("class", "text-box, right");
+	// nuevoMensaje.setAttribute("class", "text-box, right, mensajeChat");
+	$(nuevoMensaje).addClass("text-box right mensajeChat");
 	// Agregamos el contenido al div
 	nuevoMensaje.appendChild(contenido);
 	// Agregamos nuevo mensaje a chat
 	cajaChat.appendChild(nuevoMensaje);
-	mensajeInput.value = "";
+	// mensajeInput.value = "";
 
 };
 // Agregar Mensaje
@@ -38,8 +39,6 @@ var agregarMensaje = function(){
 		persona:contacto
 	};
 	mensajes.push(temp);
-	//no se escribe el mensaje, No se ve en el array
-	console.log(mensaje)
 }
 
 //Buscar mensaje
@@ -73,6 +72,7 @@ function doSearch(){
 }
 
 $(document).ready(function(){
+
 	// Agregar Mensaje con enter
 	$('#mensajeInput').keypress(function(e){
 		var mensaje=mensajeInput.value
@@ -83,12 +83,17 @@ $(document).ready(function(){
 			}
 			agregarTarea();
 			agregarMensaje();
+			mensajeInput.value = "";
 		}
+
 	});
 	//Cambiar nombre de conversación
 	$('.conversacion').click(function(){
 		var data=$(this).attr('data');
 		$('#foto').html('<img class="perfil" src="image/' + fotos[data] + '">');
 		$('#nombre').html('<p id="usuario">' + nombres[data] + '</p>');
+		$('.mensajeChat').remove();
+
+
 	});
 });
