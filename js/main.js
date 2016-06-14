@@ -1,7 +1,19 @@
-//FUNCIONA
+//Variables
 var cajaChat = document.getElementById("burbujaChat"),
 	mensajeInput = document.getElementById("mensajeInput");
 
+//Arreglos
+var nombres = ['Laboratoria Peru', 'Raymi Saldomando', 
+				'Mariana Costa', 'Ana María Franklin', 
+				'Rodulfo Prieto', 'Andrea Llamas', 
+				'María Paula Rivarola', 'Katy Sanchez', 
+				'Aldo Alfaro'];
+var fotos = ['logocodeacademy.png', 'raymi.jpg',
+				'mariana.jpg', 'anamaria.jpg',
+				'rodulfo.jpg', 'andrea.jpg',
+				'mariapaula.jpg', 'katy.jpg', 'aldo.jpg']
+
+var mensajes=[];
 // Funciones
 var agregarTarea = function(){
 	var mensaje = mensajeInput.value,
@@ -16,6 +28,8 @@ var agregarTarea = function(){
 	mensajeInput.value = "";
 };
 
+
+//
 $(document).ready(function(){
 	// Agregar Mensaje con enter
 	$('#mensajeInput').keypress(function(e){
@@ -27,5 +41,19 @@ $(document).ready(function(){
 			}
 			agregarTarea();
 		}
+		//Agregar mensaje a arreglo
+		// var texto = $('#mensajeInput').val();
+		// var contacto= $('#usuario').text();
+		// var temp = {
+		// 	mensaje: texto,
+		// 	persona:contacto
+		// };
+		// mensajes.push('hola');
+	});
+	//Cambiar nombre de conversación
+	$('.conversacion').click(function(){
+		var data=$(this).attr('data');
+		$('#foto').html('<img class="perfil" src="image/' + fotos[data] + '">');
+		$('#nombre').html('<p id="usuario">' + nombres[data] + '</p>');
 	});
 });

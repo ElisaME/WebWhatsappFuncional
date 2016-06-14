@@ -33,7 +33,7 @@
 					<!--Conversaciones-->
 					<div id="conversaciones">
 						<!-- Conversacion 1 -->
-						<div class="conversacion">
+						<div class="conversacion" data="0">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/logocodeacademy.png" alt="" class="perfil inline">
@@ -44,7 +44,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 2 -->
-						<div class="conversacion">
+						<div class="conversacion" data="1">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/raymi.jpg" alt="" class="perfil inline">
@@ -55,7 +55,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 3 -->
-						<div class="conversacion">
+						<div class="conversacion" data="2">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/mariana.jpg" alt="" class="perfil inline">
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 4 -->
-						<div class="conversacion">
+						<div class="conversacion" data="3">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/anamaria.jpg" alt="" class="perfil inline">
@@ -77,7 +77,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 5 -->
-						<div class="conversacion">
+						<div class="conversacion" data="4">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/rodulfo.jpg" alt="" class="perfil inline">
@@ -88,7 +88,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 6 -->
-						<div class="conversacion">
+						<div class="conversacion" data="5">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/andrea.jpg" alt="" class="perfil inline">
@@ -99,7 +99,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 7 -->
-						<div class="conversacion">
+						<div class="conversacion" data="6">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/mariapaula.jpg" alt="" class="perfil inline">
@@ -110,7 +110,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 8 -->
-						<div class="conversacion">
+						<div class="conversacion" data="7">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/katy.jpg" alt="" class="perfil inline">
@@ -121,7 +121,7 @@
 							</div>
 						</div>
 						<!-- Conversacion 9 -->
-						<div class="conversacion">
+						<div class="conversacion" data="8">
 							<div class="row">
 								<div class="col-md-2 col-xs-2">
 									<img src="image/aldo.jpg" alt="" class="perfil inline">
@@ -133,25 +133,35 @@
 						</div>
 					</div><!-- Cierra conversaciones -->
 				</div><!-- Cierra col -->
-				<!-- Sección de diálogos de Chat -->
+				<!-- CHAT -->
 				<div class="col-md-8">
-					<!-- Encabezado de conversacion -->
-					<div class="chat bg-gray border">
-						<img src="image/logocodeacademy.png" class="perfil" alt="">
-						<i class="icon-dots-three-vertical icono"></i>
-						<i class="icon-message icono"></i>
+					<div class="row chat bg-gray border">
+						<div class="col-md-1" id="foto"></div>
+						<div class="col-md-9" id="nombre"></div>
+						<div class="col-md-1">
+							<i class="icon-dots-three-vertical icono"></i>
+						</div>
+						<div class="col-md-1">
+							<i class="icon-message icono"></i>
+						</div>
+
 					</div>
-					<!--Chat-->
-					<div class="border bg-whats" id="chat">
-						<div id="burbujaChat">
+					<div class="row">
+						<!--Chat-->
+						<div class="border bg-whats" id="chat">
+							<div id="burbujaChat">
+							</div>
 						</div>
 					</div>
-					<!-- Escribir mensaje-->
-					<div class="bg-gray border">
-						<i class="icon-insert_emoticon emoticon"></i>
-						<input id="mensajeInput" class="mensaje" type="text" placeholder="Escribe tu mensaje aqui" required>
-						<i class="icon-mic mic"></i>
+					<div class="row">
+						<!-- Escribir mensaje-->
+						<div class="bg-gray border">
+							<i class="icon-insert_emoticon emoticon"></i>
+							<input id="mensajeInput" class="mensaje" type="text" placeholder="Escribe tu mensaje aqui" required>
+							<i class="icon-mic mic"></i>
+						</div>
 					</div>
+					
 				</div><!-- Cierra col -->
 			</div><!-- Cierra row -->
 		</div><!-- cierra container -->

@@ -102,7 +102,7 @@ body{
 .inline{
 	display: inline-block;
 }
-.usuario{
+#usuario{
 	font-weight: bold;
 	margin-bottom: 0;
 	margin-left: 2%;
