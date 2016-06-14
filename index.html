@@ -28,110 +28,61 @@
 					</div>
 					<!--Buscar-->
 					<div>
-						<input class="buscar" type="text" placeholder="Buscar o empezar un chat nuevo" required>
+						<input class="buscar" type="text" placeholder="Buscar o empezar un chat nuevo" required id="searchTerm" onkeyup="doSearch()">
 					</div>
 					<!--Conversaciones-->
-					<div id="conversaciones">
-						<!-- Conversacion 1 -->
-						<div class="conversacion" data="0">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/logocodeacademy.png" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Laboratoria Peru</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 2 -->
-						<div class="conversacion" data="1">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/raymi.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Raymi Saldomando</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 3 -->
-						<div class="conversacion" data="2">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/mariana.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Mariana Costa</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 4 -->
-						<div class="conversacion" data="3">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/anamaria.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Ana Maria Martinez Franklin</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 5 -->
-						<div class="conversacion" data="4">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/rodulfo.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Rodulfo Prieto</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 6 -->
-						<div class="conversacion" data="5">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/andrea.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Andrea Llamas</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 7 -->
-						<div class="conversacion" data="6">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/mariapaula.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Maria Paula Rivarola</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 8 -->
-						<div class="conversacion" data="7">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/katy.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Katy Sanchez</p>
-								</div>
-							</div>
-						</div>
-						<!-- Conversacion 9 -->
-						<div class="conversacion" data="8">
-							<div class="row">
-								<div class="col-md-2 col-xs-2">
-									<img src="image/aldo.jpg" alt="" class="perfil inline">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<p class="usuario">Aldo Alfaro</p>
-								</div>
-							</div>
-						</div>
-					</div><!-- Cierra conversaciones -->
+					<div class="cajaConversaciones">
+						<table id="conversaciones">
+							<tr>
+								
+							</tr>
+							<!-- Conversacion1 -->
+							<tr class="conversacion" data="0">
+								<td class="celdaImagen"><img src="image/logocodeacademy.png" alt="" class="perfil inline"></td>
+								<td ><p class="usuario">Laboratoria Peru</p></td>
+							</tr>
+							<!-- Conversacion 2 -->
+							<tr class="conversacion" data="1">
+								<td class="celdaImagen"><img src="image/raymi.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Raymi Saldomando</p></td>
+							</tr>
+							<!-- Conversacion 3 -->
+							<tr class="conversacion" data="2">
+								<td class="celdaImagen"><img src="image/mariana.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Mariana Costa</p></td>
+							</tr>
+							<!-- Conversacion 4 -->
+							<tr class="conversacion" data="3">
+								<td class="celdaImagen"><img src="image/anamaria.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Ana Maria Martinez Franklin</p></td>
+							</tr>
+							<!-- Conversacion 5 -->
+							<tr class="conversacion" data="4">
+								<td class="celdaImagen"><img src="image/rodulfo.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Rodulfo Prieto</p></td>
+							</tr>
+							<!-- Conversacion 6 -->
+							<tr class="conversacion" data="5">
+								<td class="celdaImagen"><img src="image/andrea.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Andrea Llamas</p></td>
+							</tr>
+							<!-- Conversacion 7 -->
+							<tr class="conversacion" data="6">
+								<td class="celdaImagen"><img src="image/mariapaula.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Maria Paula Rivarola</p></td>
+							</tr>
+							<!-- Conversacion 8 -->
+							<tr class="conversacion" data="7">
+								<td class="celdaImagen"><img src="image/katy.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Katy Sanchez</p></td>
+							</tr>
+							<!-- Conversacion 9 -->
+							<tr class="conversacion" data="8">
+								<td class="celdaImagen"><img src="image/aldo.jpg" alt="" class="perfil inline"></td>
+								<td><p class="usuario">Aldo Alfaro</p></td>
+							</tr>
+						</table>
+					</div>
 				</div><!-- Cierra col -->
 				<!-- CHAT -->
 				<div class="col-md-8">

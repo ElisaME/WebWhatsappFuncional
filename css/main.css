@@ -14,12 +14,7 @@
 .padding-col{
 	padding:0;
 }
-/* Imagen */
-.perfil{
-	width:  50px;
-	height: 50px;
-	border-radius: 100px;
-}
+
 /* Backgrounds */
 /*#header{
 	background-color: #177569;
@@ -81,23 +76,34 @@ body{
 	float: right;
 	padding: 3% 1%;
 }
-/* Conversaciones */
-.chats-header{
-	padding: 2%;
-	height: 70px;
-	border: 1px solid #BABABA;
-}
-.chat{
-	padding: 1%;
-	height: 70px;
-}
-#conversaciones{
+/*#conversaciones{
 	height: 450px;
 	overflow-y: scroll;  
 	overflow-x:hidden;
 }
 #conversaciones div{
 	padding: 1% 2%;
+}*/
+/*Panel Conversaciones / Tabla*/
+#conversaciones{
+	width: 100%;
+}
+.cajaConversaciones{
+	height: 450px;
+	overflow-y: scroll;  
+	overflow-x:hidden;
+}
+.celdaImagen{
+	width: 24%;
+    text-align: center;
+}
+.celdaNombre{
+	width: 80%;
+}
+.perfil{
+	width:  50px;
+	height: 50px;
+	border-radius: 100px;
 }
 .inline{
 	display: inline-block;
@@ -107,6 +113,18 @@ body{
 	margin-bottom: 0;
 	margin-left: 2%;
 }
+/* Contenido Conversaciones */
+.chats-header{
+	padding: 2%;
+	height: 70px;
+	border: 1px solid #BABABA;
+}
+.chat{
+	padding: 1%;
+	height: 70px;
+}
+
+
 /* Chat */
 #chat{
 	position: relative;
