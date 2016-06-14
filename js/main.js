@@ -15,8 +15,8 @@ var fotos = ['logocodeacademy.png', 'raymi.jpg',
 
 var mensajes=[];
 // Funciones
-//Agregar Tarea
-var agregarTarea = function(){
+//Agregar Mensaje
+var agregarMensaje = function(){
 	var mensaje = mensajeInput.value,
 		nuevoMensaje = document.createElement("div"),
 		contenido = document.createTextNode(mensaje);
@@ -28,10 +28,9 @@ var agregarTarea = function(){
 	// Agregamos nuevo mensaje a chat
 	cajaChat.appendChild(nuevoMensaje);
 	// mensajeInput.value = "";
-
 };
 // Agregar Mensaje
-var agregarMensaje = function(){
+var guardarMensaje = function(){
 	var mensaje = mensajeInput.value;
 	var contacto= $('#usuario').text();
 	var temp = {
@@ -40,6 +39,26 @@ var agregarMensaje = function(){
 	};
 	mensajes.push(temp);
 }
+//Agregar Mensaje Anterior
+var agregarMensajeAnterior = function(){
+	//Recorrer array
+	for (i=0; i<mensajes.length;i++){
+		var temp = mensajes [i];
+		var contacto= $('#usuario').text();
+		if (contacto == temp.persona){
+			var mensajeAnterior= temp.mensaje
+			console.log(mensajeAnterior)
+			var nuevoMensaje = document.createElement("div"),
+				contenido = document.createTextNode(mensajeAnterior);
+
+			$(nuevoMensaje).addClass("text-box right mensajeChat");
+			// Agregamos el contenido al div
+			nuevoMensaje.appendChild(contenido);
+			// Agregamos nuevo mensaje a chat
+			cajaChat.appendChild(nuevoMensaje);
+		}
+	}
+};
 
 //Buscar mensaje
 function doSearch(){
@@ -71,8 +90,8 @@ function doSearch(){
 	}
 }
 
-$(document).ready(function(){
 
+$(document).ready(function(){
 	// Agregar Mensaje con enter
 	$('#mensajeInput').keypress(function(e){
 		var mensaje=mensajeInput.value
@@ -81,8 +100,8 @@ $(document).ready(function(){
 			if (mensaje==''){
 				return false
 			}
-			agregarTarea();
 			agregarMensaje();
+			guardarMensaje();
 			mensajeInput.value = "";
 		}
 
@@ -90,10 +109,12 @@ $(document).ready(function(){
 	//Cambiar nombre de conversación
 	$('.conversacion').click(function(){
 		var data=$(this).attr('data');
+		//pone foto
 		$('#foto').html('<img class="perfil" src="image/' + fotos[data] + '">');
+		//pone nombre
 		$('#nombre').html('<p id="usuario">' + nombres[data] + '</p>');
+		//quita mensajes
 		$('.mensajeChat').remove();
-
-
+		agregarMensajeAnterior();
 	});
 });
