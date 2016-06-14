@@ -14,12 +14,7 @@
 .padding-col{
 	padding:0;
 }
-/* Imagen */
-.perfil{
-	width:  50px;
-	height: 50px;
-	border-radius: 100px;
-}
+
 /* Backgrounds */
 /*#header{
 	background-color: #177569;
@@ -39,7 +34,7 @@ body{
 	height:450px;
 }
 #ventana{
-	margin-top: 4%;
+	margin-top: 2%;
 }
 
 .conversacion{
@@ -67,7 +62,7 @@ body{
 .mensaje{
 	padding:1%;
 	margin: 2% auto;
-	width: 90%;
+	width: 80%;
 }
 .emoticon{
 	font-size: 1.5em;
@@ -81,7 +76,44 @@ body{
 	float: right;
 	padding: 3% 1%;
 }
-/* Conversaciones */
+/*#conversaciones{
+	height: 450px;
+	overflow-y: scroll;  
+	overflow-x:hidden;
+}
+#conversaciones div{
+	padding: 1% 2%;
+}*/
+/*Panel Conversaciones / Tabla*/
+#conversaciones{
+	width: 100%;
+}
+.cajaConversaciones{
+	height: 450px;
+	overflow-y: scroll;  
+	overflow-x:hidden;
+}
+.celdaImagen{
+	width: 24%;
+    text-align: center;
+}
+.celdaNombre{
+	width: 80%;
+}
+.perfil{
+	width:  50px;
+	height: 50px;
+	border-radius: 100px;
+}
+.inline{
+	display: inline-block;
+}
+#usuario{
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-left: 2%;
+}
+/* Contenido Conversaciones */
 .chats-header{
 	padding: 2%;
 	height: 70px;
@@ -91,22 +123,8 @@ body{
 	padding: 1%;
 	height: 70px;
 }
-#conversaciones{
-	height: 450px;
-	overflow-y: scroll;  
-	overflow-x:hidden;
-}
-#conversaciones div{
-	padding: 1% 2%;
-}
-.inline{
-	display: inline-block;
-}
-.usuario{
-	font-weight: bold;
-	margin-bottom: 0;
-	margin-left: 2%;
-}
+
+
 /* Chat */
 #chat{
 	position: relative;
@@ -117,13 +135,13 @@ body{
 	margin-bottom: 0;
 }
 .text-box{
-	background-color: #fff;
+	background-color:#83E881;
 	padding: 1%;
 	border-radius: 5%;
 	position: relative;
 	width: 40%;
 	margin-top: 2%;
-	display: block
+	display: block;
 }
 .left{
 	position: relative;
