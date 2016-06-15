@@ -42,7 +42,8 @@ var guardarMensaje = function(){
 	var contacto= $('#usuario').text();
 	var temp = {
 		mensaje: mensaje,
-		persona:contacto
+		persona:contacto,
+		hora: horaMensaje()
 	};
 	mensajes.push(temp);
 }
@@ -55,7 +56,7 @@ var agregarMensajeAnterior = function(){
 		//Si coincide entonces crear nuevo div con mensaje anterior
 		if (contacto == temp.persona){
 			var mensajeAnterior= temp.mensaje
-			console.log(mensajeAnterior)
+			// console.log(mensajeAnterior)
 			var nuevoMensaje = document.createElement("div"),
 				contenido = document.createTextNode(mensajeAnterior);
 
@@ -66,7 +67,7 @@ var agregarMensajeAnterior = function(){
 			cajaChat.appendChild(nuevoMensaje);
 
 			var reloj =document.createElement('div');
-			var hora=horaMensaje();
+			var hora=temp.hora;
 			reloj.innerHTML=hora;
 			nuevoMensaje.appendChild(reloj);
 			$(reloj).addClass("hora");
