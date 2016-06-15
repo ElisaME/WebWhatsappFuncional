@@ -2,7 +2,7 @@
 var cajaChat = document.getElementById("burbujaChat"),
 	mensajeInput = document.getElementById("mensajeInput");
 
-//Arreglos
+//----------------------------Arreglos----------------------------------
 var nombres = ['Laboratoria Peru', 'Raymi Saldomando', 
 				'Mariana Costa', 'Ana María Franklin', 
 				'Rodulfo Prieto', 'Andrea Llamas', 
@@ -14,12 +14,18 @@ var fotos = ['logocodeacademy.png', 'raymi.jpg',
 				'mariapaula.jpg', 'katy.jpg', 'aldo.jpg']
 
 var mensajes=[];
-// Funciones
+// ----------------------------Funciones--------------------------------
 //Agregar Mensaje
 var agregarMensaje = function(){
 	var mensaje = mensajeInput.value,
 		nuevoMensaje = document.createElement("div"),
 		contenido = document.createTextNode(mensaje);
+
+	var reloj =document.createElement('div');
+	var hora=horaMensaje();
+	reloj.innerHTML=hora;
+	nuevoMensaje.appendChild(reloj);
+	$(reloj).addClass("hora");
 
 	// nuevoMensaje.setAttribute("class", "text-box, right, mensajeChat");
 	$(nuevoMensaje).addClass("text-box right mensajeChat");
@@ -29,6 +35,7 @@ var agregarMensaje = function(){
 	cajaChat.appendChild(nuevoMensaje);
 	// mensajeInput.value = "";
 };
+
 // Agregar Mensaje
 var guardarMensaje = function(){
 	var mensaje = mensajeInput.value;
@@ -45,6 +52,7 @@ var agregarMensajeAnterior = function(){
 	for (i=0; i<mensajes.length;i++){
 		var temp = mensajes [i];
 		var contacto= $('#usuario').text();
+		//Si coincide entonces crear nuevo div con mensaje anterior
 		if (contacto == temp.persona){
 			var mensajeAnterior= temp.mensaje
 			console.log(mensajeAnterior)
@@ -56,9 +64,30 @@ var agregarMensajeAnterior = function(){
 			nuevoMensaje.appendChild(contenido);
 			// Agregamos nuevo mensaje a chat
 			cajaChat.appendChild(nuevoMensaje);
+
+			var reloj =document.createElement('div');
+			var hora=horaMensaje();
+			reloj.innerHTML=hora;
+			nuevoMensaje.appendChild(reloj);
+			$(reloj).addClass("hora");
 		}
 	}
 };
+
+//Poner hora
+function horaMensaje(){
+	var fecha = new Date();
+	var hora = fecha.getHours();
+	var minutos = fecha.getMinutes();
+	if (hora<10){
+		hora="0"+hora;
+	}
+	if (minutos<10){
+		minutos="0"+minutos;
+	}
+	var time= hora + ":" + minutos;
+	return time
+}
 
 //Buscar mensaje
 function doSearch(){

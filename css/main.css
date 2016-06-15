@@ -157,7 +157,10 @@ body{
 	border-radius: 5%;
 }
 .hora{
-	text-align: right;
+	   position: absolute;
+    right: 8px;
+    top: 45%;
+    font-size: 11px;
 }
 /* Text colors */
 .text-azul{
